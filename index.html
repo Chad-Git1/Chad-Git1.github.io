@@ -3,37 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Page Website</title>
+    <title>Velotous</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
+        <!-- Logo on the top-left, update the src to point to the images folder -->
+        <a href="#home" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#home" data-lang="home">Home</a></li>
+            <li><a href="#about" data-lang="about">About</a></li>
+            <li><a href="#services" data-lang="services">Services</a></li>
+            <li><a href="#booking" data-lang="booking">Booking</a></li>
         </ul>
+        
+        <a href="#login" class="login-icon">
+            <img src="images/person-icon.png" alt="Login">
+        </a>
+        <button id="lang-toggle" onclick="toggleLanguage()">FR</button>
     </nav>
 
+    <!-- Content sections -->
     <section id="home">
-        <h1>Home Section</h1>
-        <p>Content for the home section.</p>
+        <h1 data-lang="home-section-title">Home Section</h1>
+        <p data-lang="home-section-content">Content for the home section.</p>
     </section>
 
     <section id="about">
-        <h1>About Section</h1>
-        <p>Content for the about section.</p>
+        <h1 data-lang="about-section-title">About Section</h1>
+        <p data-lang="about-section-content">Content for the about section.</p>
     </section>
 
     <section id="services">
-        <h1>Services Section</h1>
-        <p>Content for the services section.</p>
+        <h1 data-lang="services-section-title">Services Section</h1>
+        <p data-lang="services-section-content">Content for the services section.</p>
     </section>
 
-    <section id="contact">
-        <h1>Contact Section</h1>
-        <p>Content for the contact section.</p>
+    <section id="booking">
+        <h1 data-lang="booking-section-title">Booking Section</h1>
+        <p data-lang="booking-section-content">Content for the booking section.</p>
     </section>
 
     <script src="scripts.js"></script>
