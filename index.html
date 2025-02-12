@@ -8,7 +8,6 @@
 </head>
 <body>
     <nav>
-        <!-- Logo on the top-left, update the src to point to the images folder -->
         <a href="#home" class="logo">
             <img src="images/logo.png" alt="Logo">
         </a>
@@ -20,13 +19,18 @@
             <li><a href="#booking" data-lang="booking">Booking</a></li>
         </ul>
         
-        <a href="#login" class="login-icon">
+        <!-- This will link to the login/register page -->
+        <a href="login-register.html" class="login-icon">
             <img src="images/person-icon.png" alt="Login">
         </a>
+
+        <a href="#" id="location-icon">
+            <img src="images/location-pin.png" alt="Location">
+        </a>
+
         <button id="lang-toggle" onclick="toggleLanguage()">FR</button>
     </nav>
 
-    <!-- Content sections -->
     <section id="home">
         <h1 data-lang="home-section-title">Home Section</h1>
         <p data-lang="home-section-content">Content for the home section.</p>

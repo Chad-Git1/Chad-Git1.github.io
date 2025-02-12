@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velotous - Login/Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        
+        <ul>
+            <li><a href="index.html" data-lang="home">Home</a></li>
+            <li><a href="index.html#about" data-lang="about">About</a></li>
+            <li><a href="index.html#services" data-lang="services">Services</a></li>
+            <li><a href="index.html#booking" data-lang="booking">Booking</a></li>
+        </ul>
+    </nav>
+
+    <section id="login-register">
+        <div class="form-container">
+            <div class="form-tabs">
+                <button class="tab active" id="login-tab" onclick="showLoginForm()">Login</button>
+                <button class="tab" id="register-tab" onclick="showRegisterForm()">Register</button>
+            </div>
+
+            <form id="login-form" class="form">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="register-form" class="form" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+    <script>
+        function showLoginForm() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-tab').classList.add('active');
+            document.getElementById('register-tab').classList.remove('active');
+        }
+
+        function showRegisterForm() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+            document.getElementById('login-tab').classList.remove('active');
+            document.getElementById('register-tab').classList.add('active');
+        }
+
+        showLoginForm();
+    </script>
+</body>
+</html>

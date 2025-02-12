@@ -1,9 +1,5 @@
-// JavaScript for language toggling
-
-// Store the current language in localStorage or as a global variable
 let currentLanguage = 'en';
 
-// Language dictionary to handle translation
 const translations = {
     en: {
         "home": "Home",
@@ -35,28 +31,61 @@ const translations = {
     }
 };
 
-// Toggle language function
 function toggleLanguage() {
     currentLanguage = (currentLanguage === 'en') ? 'fr' : 'en';
     
-    // Change the button text based on the current language
     const langButton = document.getElementById("lang-toggle");
     langButton.textContent = (currentLanguage === 'en') ? 'FR' : 'EN';
     
-    // Update all the text content based on the selected language
     document.querySelectorAll('[data-lang]').forEach((element) => {
         const key = element.getAttribute('data-lang');
         element.textContent = translations[currentLanguage][key];
     });
 }
 
-// Smooth scrolling behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const target = document.querySelector(this.getAttribute('href'));
+
+        const navbarHeight = document.querySelector('nav').offsetHeight;
+
+        const offsetAdjustment = -55; 
+        const scrollToPosition = target.offsetTop - navbarHeight - offsetAdjustment;
+
+        window.scrollTo({
+            top: scrollToPosition,
             behavior: 'smooth'
         });
     });
+});
+
+
+
+
+document.getElementById("location-icon").addEventListener("click", function(event) {
+    event.preventDefault();
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                if(currentLanguage === 'fr'){
+                    alert("Merci d'avoir activé les services de localisation :)");
+                } else {
+                    alert("Thankyou for enabling location services :)");
+                }
+                
+                
+                console.log("Latitude: " + position.coords.latitude);
+                console.log("Longitude: " + position.coords.longitude);
+            },
+            function(error) {
+                alert("Location access denied or unavailable.");
+                console.error(error);
+            }
+        );
+    } else {
+        alert("Geolocation is not supported by this browser.");
+    }
 });

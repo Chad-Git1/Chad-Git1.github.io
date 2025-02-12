@@ -3,8 +3,9 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(to bottom, #87cefa, #1e3a8a); /* Light blue at the top to dark blue at the bottom */
+    background: linear-gradient(to bottom, #87cefa, #1e3a8a);
     color: white;
+    margin-top: 60px;
 }
 
 nav {
@@ -12,23 +13,24 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(51, 51, 51, 0.8); /* Slight transparency */
+    background-color: rgba(51, 51, 51, 0.8); 
     padding: 10px;
     z-index: 100;
     display: flex;
-    justify-content: space-between; /* Space between the menu and login icon */
+    justify-content: space-between; 
     align-items: center;
+    height: 60px;
 }
 
 nav .logo {
     position: absolute;
-    left: 20px; /* Adjust to your preferred left margin */
+    left: 20px;     
     top: 50%;
-    transform: translateY(-50%); /* Vertically center the logo */
+    transform: translateY(-50%); 
 }
 
 nav .logo img {
-    height: 40px; /* Adjust logo size as needed */
+    height: 40px;
 }
 
 nav ul {
@@ -36,8 +38,8 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-    justify-content: center; /* Centers the menu items */
-    flex-grow: 1; /* Ensures the menu takes up all available space between the left and right */
+    justify-content: center; 
+    flex-grow: 1; 
 }
 
 nav ul li {
@@ -50,44 +52,48 @@ nav ul li a {
     font-size: 18px;
 }
 
-.login-icon {
+nav .login-icon {
     margin-right: 20px;
+    display: flex;
+    align-items: center; 
+    height: 40px; 
 }
 
 .login-icon img {
-    width: 25px; /* Adjust size of the person icon */
-    height: auto;
+    width: auto;
+    height: 100%; 
 }
 
 #lang-toggle {
-    background-color: transparent; /* Make the background transparent */
-    color: white; /* Keep the text color white */
-    border: 2px solid white; /* White border around the button */
+    background-color: transparent; 
+    color: white; 
+    border: 2px solid white; 
     padding: 8px 16px;
     font-size: 16px;
     cursor: pointer;
     margin-left: 20px;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    transition: all 0.3s ease; 
+    height: 40px; 
 }
 
-/* Optional: Hover effect for better visual feedback */
+
+
 #lang-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Slight white background on hover */
-    border-color: #87cefa; /* Change border color on hover */
+    background-color: rgba(255, 255, 255, 0.2); 
+    border-color: #87cefa; 
 }
 
-/* Bounce effect on section scroll */
+
 section {
     height: 100vh;
     padding: 50px;
-    margin-top: 50px;
-    position: relative; /* Ensures the sections' content doesn't overlap */
+    margin-top: 70px;
+    position: relative; 
 }
 
-/* Apply bounce animation to section content */
 section > * {
-    opacity: 1; /* Start invisible */
-    animation: bounceIn 0.7s ease-in-out forwards; /* Apply bounce effect to all children */
+    opacity: 1; 
+    animation: bounceIn 0.7s ease-in-out forwards; 
 }
 
 @keyframes bounceIn {
@@ -104,8 +110,122 @@ section > * {
     }
 }
 
+
+#location-icon {
+    margin-right: 20px;
+    display: flex;
+    align-items: center; 
+    height: 40px; 
+}
+
+#location-icon img {
+    width: auto;
+    height: 100%; 
+}
+
+
 #home { background-color: transparent; }
 #about { background-color: transparent; }
 #services { background-color: transparent; }
 #booking { background-color: transparent; }
 
+/* Form container */
+.form-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 8px;
+}
+
+.form-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    width: 48%;
+    padding: 10px;
+    background-color: #87cefa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background-color: #1e3a8a;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #87cefa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.form button:hover {
+    background-color: #1e3a8a;
+}
+
+.form h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: none;
+}
+
+/* Profile container */
+.profile-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(51, 51, 51, 0.8);
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+.profile-container h2 {
+    margin-bottom: 20px;
+}
+
+.profile-container p {
+    margin: 10px 0;
+}
+
+.profile-container button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #87cefa;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+.profile-container button:hover {
+    background-color: #1e3a8a;
+}
+
+#login-register {
+    padding-top: 20px; /* Padding for form page */
+    padding-bottom: 20px; /* Padding for form page */
+}
