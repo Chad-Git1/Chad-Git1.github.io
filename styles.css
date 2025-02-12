@@ -129,7 +129,6 @@ section > * {
 #services { background-color: transparent; }
 #booking { background-color: transparent; }
 
-/* Form container */
 .form-container {
     max-width: 400px;
     margin: 100px auto;
@@ -192,7 +191,6 @@ section > * {
     display: none;
 }
 
-/* Profile container */
 .profile-container {
     max-width: 400px;
     margin: 50px auto;
@@ -228,4 +226,27 @@ section > * {
 #login-register {
     padding-top: 20px; 
     padding-bottom: 20px;
+}
+
+#home {
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home-bicycle {
+    width: 60%; 
+    max-height: 700px; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+#about {
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
 }

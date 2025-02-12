@@ -6,10 +6,10 @@ const translations = {
         "about": "About",
         "services": "Services",
         "booking": "Booking",
-        "home-section-title": "Home Section",
-        "home-section-content": "Content for the home section.",
-        "about-section-title": "About Section",
-        "about-section-content": "Content for the about section.",
+        "home-section-title": "Velotous",
+        "home-section-content": "Pedal without worries",
+        "about-section-title": "About Us",
+        "about-section-content": "Email : Info@velotous.com \n\nPhone : 613-123-1234 \n\nVelotous - Mobile bike repair \n\nAt Velotous, we make bike repair simpler than ever. Our experts go directly to you to help you with all you bicycle needs. \n\nPedal without worries",
         "services-section-title": "Services Section",
         "services-section-content": "Content for the services section.",
         "booking-section-title": "Booking Section",
@@ -35,16 +35,17 @@ const translations = {
         "confirm-password": "Confirm Password",
         "register": "Register",
         "fullname": "Full Name",
+        "profile-title" : "User Profile"
     },
     fr: {
         "home": "Accueil",
         "about": "À propos",
         "services": "Services",
         "booking": "Réservation",
-        "home-section-title": "Section d'accueil",
-        "home-section-content": "Contenu de la section d'accueil.",
-        "about-section-title": "Section À propos",
-        "about-section-content": "Contenu de la section À propos.",
+        "home-section-title": "Velotous",
+        "home-section-content": "Pedalez sans soucis",
+        "about-section-content": "Courriel : Info@velotous.com \n\nTéléphone : 613-123-1234 \n\nVelotous - Réparation de vélo à domicile \n\nChez Vélotous, nous rendons la réparation de vélo plus simple que jamais. Nos experts se rendent directement chez vous assister avec tous vos besoins de vélo. \n\nPédalez sans soucis",
+        "about-section-title": "À propos de nous",
         "services-section-title": "Section Services",
         "services-section-content": "Contenu de la section Services.",
         "booking-section-title": "Section Réservation",
@@ -70,6 +71,7 @@ const translations = {
         "confirm-password": "Confirmer le mot de passe",
         "register": "Nouveau client",        
         "fullname": "Nom complet",
+        "profile-title" : "Profil usager"
     }
 };
 
@@ -81,8 +83,9 @@ function applyTranslations() {
             if (element.tagName === "INPUT") {
                 element.setAttribute("placeholder", translations[currentLanguage][key]);
             } else {
-                element.textContent = translations[currentLanguage][key];
+                element.innerHTML = translations[currentLanguage][key].replace(/\n/g, "<br>");
             }
+            
         }
         element.style.visibility = "visible"; 
     });
