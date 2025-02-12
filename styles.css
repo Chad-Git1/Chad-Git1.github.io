@@ -159,7 +159,7 @@ section > * {
 }
 
 .form input {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
     border: none;
@@ -226,6 +226,6 @@ section > * {
 }
 
 #login-register {
-    padding-top: 20px; /* Padding for form page */
-    padding-bottom: 20px; /* Padding for form page */
+    padding-top: 20px; 
+    padding-bottom: 20px;
 }

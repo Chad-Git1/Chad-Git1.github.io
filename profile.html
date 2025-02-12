@@ -18,18 +18,35 @@
             <li><a href="index.html#services" data-lang="services">Services</a></li>
             <li><a href="index.html#booking" data-lang="booking">Booking</a></li>
         </ul>
+
+        <button id="lang-toggle" onclick="toggleLanguage()">FR</button>
+
     </nav>
 
     <section id="profile">
         <div class="profile-container">
-            <h2>Welcome, John Doe</h2>
-            <p>Email: john@example.com</p>
-            <p>Full Name: John Doe</p>
+            <h2 data-lang="profile-title">User Profile</h2>
+            <ul>
+                <li><span data-lang="name">Name:</span> <span data-lang="name-content">John Doe</span></li>    
+                <li><span data-lang="address">Address:</span> <span data-lang="address-content">123, Bellvue Ave</span></li>
+                <li><span data-lang="email">E-mail:</span> <span data-lang="email-content">JohnDoe@velotous.com</span></li>    
+                <li><span data-lang="phone-number">Phone Number:</span> <span data-lang="phone-number-content">613-123-1234</span></li>
+                <li><span data-lang="payment">Payment:</span> <span data-lang="payment-content">******-******-****00</span></li>       
+            </ul>
+            
+            <h2 data-lang="reservation-title">Reservations</h2>
+            <ul>
+                <li><span data-lang="reservation">Reservation:</span> <span data-lang="reservation-content">Platinum service : 2025-02-07 4pm</span></li>    
+                <li><span data-lang="inventory">Inventory:</span> <span data-lang="inventory-content">3 x Gold service : exp : 2026-01-01, 1 x Platinum service : exp : 2026-09-01</span></li>
+            </ul>
 
-            <button onclick="window.location.href='index.html'">Logout</button>
+            <button onclick="window.location.href='index.html'" data-lang="logout">Logout</button>
         </div>
     </section>
 
     <script src="scripts.js"></script>
+    <script>
+        applyTranslations();
+    </script>
 </body>
 </html>
