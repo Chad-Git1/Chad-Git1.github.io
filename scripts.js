@@ -44,7 +44,10 @@ const translations = {
         "platinum-content" : "Performance adjustments",
         "choose-date" : "Choose Date and Time",
         "next-button" : "Next",
-        "popup-text" : "Check your emails"
+        "popup-text" : "Check your emails",
+        "quote-section-title" : "Get a quote",
+        "quote-section-content" : "Upload a photo",
+        "quote-section-click" : "Submit"
     },
     fr: {
         "home": "Accueil",
@@ -89,7 +92,10 @@ const translations = {
         "platinum-content" : "Ajustements de performance",
         "choose-date" : "Choisir une date et temps",
         "next-button" : "Prochain",
-        "popup-text" : "Vérifer vous courriels"
+        "popup-text" : "Vérifer vous courriels",
+        "quote-section-title" : "Obtenir un devis",
+        "quote-section-content" : "Ajouter une photo",
+        "quote-section-click" : "Soumettre"
     }
 };
 
@@ -189,3 +195,32 @@ function showRegisterForm() {
 document.addEventListener("DOMContentLoaded", () => {
     applyTranslations();
 });
+
+function showQuotePopup() {
+    const fileInput = document.getElementById('file-upload');
+    if (fileInput.files.length === 0) {
+        if(currentLanguage === 'fr'){
+            alert('Veuillez ajouter un fichier avant de soumettre.');
+        } else {
+            alert('Please upload a file before submitting.');
+        }
+        return;
+    }
+
+    const quotePopup = document.getElementById('quote-popup');
+    const quotePopupText = document.getElementById('quote-popup-text');
+    
+    const fileName = fileInput.files[0].name;
+    if(currentLanguage === 'fr'){
+        quotePopupText.innerText = `Votre devis vous sera envoyé par courriel sous peu. Fichier soumis : ${fileName}`;
+    } else {
+        quotePopupText.innerText = `Your quote will be sent to your e-mail shortly. File uploaded : ${fileName}`;
+    }
+
+    quotePopup.style.display = 'flex';
+}
+
+function closeQuotePopup() {
+    const quotePopup = document.getElementById('quote-popup');
+    quotePopup.style.display = 'none';
+}

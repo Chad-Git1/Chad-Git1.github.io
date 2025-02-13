@@ -127,6 +127,7 @@ section > * {
 #home { background-color: transparent; }
 #about { background-color: transparent; }
 #services { background-color: transparent; }
+#quote { background-color: transparent; }
 #booking { background-color: transparent; }
 
 .form-container {
@@ -346,6 +347,14 @@ section > * {
 
 #popup-service, #popup-datetime , #popup-text{
     color: #ffffff; 
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#quote {
+    text-align: left;
+    padding: 50px;
+    position: relative;
     font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
 }
