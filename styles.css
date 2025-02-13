@@ -250,3 +250,102 @@ section > * {
     font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
 }
+
+#services {
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.service-box {
+    background: #333; 
+    border-radius: 12px;
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    width: 250px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; 
+}
+
+.service-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2); 
+    filter: blur(20px);
+    transform: scale(1.5);
+    transition: opacity 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.service-box:hover::before {
+    opacity: 0.4;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.service-box h2 {
+    font-size: 1.5em;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.service-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-box ul li {
+    margin: 10px 0;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+#bronze {
+    background: linear-gradient(145deg, #cead8d, #b86b26); 
+    border: 1px solid #b8860b;
+}
+
+#silver {
+    background: linear-gradient(145deg, #c0c0c0, #4b4a4a); 
+    border: 1px solid #a9a9a9;
+}
+
+#gold {
+    background: linear-gradient(145deg, #ebd03a, #f6b800); 
+    border: 1px solid #b8860b;
+}
+
+#platinum {
+    background: linear-gradient(145deg, #27109a, #2328ab); 
+    border: 1px solid #d3d3d3;
+}
+
+#booking {
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#popup-service, #popup-datetime , #popup-text{
+    color: #ffffff; 
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+}
