@@ -127,6 +127,7 @@ section > * {
 #home { background-color: transparent; }
 #about { background-color: transparent; }
 #services { background-color: transparent; }
+#bike-parts { background-color: transparent; }
 #quote { background-color: transparent; }
 #booking { background-color: transparent; }
 
@@ -258,7 +259,10 @@ section > * {
     position: relative;
     font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
+    background-color: transparent;
+    min-height: 160vh; 
 }
+
 
 .service-box {
     background: #333; 
@@ -357,4 +361,36 @@ section > * {
     position: relative;
     font-size: x-large;
     font-family: 'Courier New', Courier, monospace;
+}
+
+#bike-parts {
+    text-align: left;
+    padding: 50px;
+    position: relative;
+    font-size: x-large;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 0px;
+}
+
+#bike-parts h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#bike-parts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#bike-parts ul li {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+#parts{
+    width: fit-content;
 }
