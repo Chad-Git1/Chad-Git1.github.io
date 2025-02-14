@@ -57,7 +57,8 @@ const translations = {
         "part-5" : "Pedal - $4",
         "part-6" : "Wheel - $14",
         "part-7" : "Seat - $15",
-        "part-8" : "Tube - $8"
+        "part-8" : "Tube - $8",
+        "FAQ" : "Open 24/7 anywhere within the Ottawa Urban borders"
     },
     fr: {
         "home": "Accueil",
@@ -115,7 +116,8 @@ const translations = {
         "part-5" : "Pedale - $4",
         "part-6" : "Roue - $14",
         "part-7" : "Siege - $15",
-        "part-8" : "Tube - $8"
+        "part-8" : "Tube - $8",
+        "FAQ" : "Ouvert 24 heures sur 24, 7 jours sur 7, partout dans les limites urbaines d'Ottawa"
     }
 };
 
